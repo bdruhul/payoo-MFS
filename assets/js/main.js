@@ -8,13 +8,56 @@ document.getElementById("log-out").addEventListener("click", function () {
 // all section element
 const addMoneyInput = document.getElementById("addMoneyInput");
 addMoneyInput.style.display = "none";
+const cashout = document.getElementById("cash-out");
+cashout.style.display = "none";
+const TransferMoney = document.getElementById("Transefer");
+TransferMoney.style.display = "none";
+const bonus = document.getElementById("bonus");
+bonus.style.display = "none";
+
 // all section element
+
+// section click to link
+
+document.getElementById("addMoney").addEventListener("click", function () {
+  addMoneyInput.style.display = "block";
+  cashout.style.display = "none";
+  TransferMoney.style.display = "none";
+  bonus.style.display = "none";
+});
+document.getElementById("CashOut").addEventListener("click", function () {
+  addMoneyInput.style.display = "none";
+  cashout.style.display = "block";
+  TransferMoney.style.display = "none";
+  bonus.style.display = "none";
+});
+
+document.getElementById("TransferMoney").addEventListener("click", function () {
+  addMoneyInput.style.display = "none";
+  cashout.style.display = "none";
+  TransferMoney.style.display = "block";
+  bonus.style.display = "none";
+});
+document.getElementById("GetBonus").addEventListener("click", function () {
+  addMoneyInput.style.display = "none";
+  cashout.style.display = "none";
+  TransferMoney.style.display = "none";
+  bonus.style.display = "block";
+});
+// section click to link
 
 // error message
 const error = document.getElementById("error");
 error.style.display = "none";
 let message = document.getElementById("messageText");
 message.innerText = "";
+
+const ok = document.getElementById("ok");
+ok.addEventListener("click", function () {
+  const error = document.getElementById("error");
+  error.style.display = "none";
+});
+
 // error message
 
 // add money js code
@@ -22,20 +65,12 @@ document
   .getElementById("Add-Money")
   .addEventListener("click", function (event) {
     event.preventDefault();
-
-    const ok = document.getElementById("ok");
-    ok.addEventListener("click", function () {
-      const error = document.getElementById("error");
-      error.style.display = "none";
-    });
-
     const BankName = document.getElementById("options").value;
     const account = document.getElementById("account-number").value;
     const ammount = document.getElementById("amount").value;
     const passWord = document.getElementById("password").value;
     const currentAmountElement = document.getElementById("money");
     let currentAmount = parseFloat(currentAmountElement.innerText);
-
     if (BankName === "Bkash" || BankName === "Nagad" || BankName === "Rocket") {
       if (account.length === 11) {
         if (parseInt(ammount) > 0) {
@@ -67,19 +102,9 @@ document
     }
   });
 // add money js code
-
 // cashOut js
 document.getElementById("Withdraw").addEventListener("click", function (event) {
   event.preventDefault();
-
-  const ok = document.getElementById("ok");
-  ok.removeAttribute("href");
-
-  ok.addEventListener("click", function () {
-    const error = document.getElementById("error");
-    error.style.display = "none";
-  });
-
   const currentAmountElement = document.getElementById("money");
   let currentAmount = parseFloat(currentAmountElement.innerText);
   const AgentNumber = document.getElementById("Agent-number").value;
@@ -110,5 +135,55 @@ document.getElementById("Withdraw").addEventListener("click", function (event) {
     message.innerText = "Please Added Valid Agent Number";
   }
 });
-
 // cashOut js
+
+// Transfer js
+document.getElementById("send").addEventListener("click", function (event) {
+  event.preventDefault();
+  const currentAmountElement = document.getElementById("money");
+  let currentAmount = parseFloat(currentAmountElement.innerText);
+  const userNumber = document.getElementById("user-number").value;
+  const amountTransfer = document.getElementById("amount-transfer").value;
+  const passwordTransfer = document.getElementById("password-transfer").value;
+  if (userNumber.length === 11) {
+    if (parseInt(amountTransfer) > 0) {
+      if (parseInt(passwordTransfer) === 1234) {
+        const remvoeBlance = currentAmount - parseInt(amountTransfer);
+        currentAmountElement.innerText = remvoeBlance;
+        document.getElementById("user-number").value = "";
+        document.getElementById("amount-transfer").value = "";
+        document.getElementById("password-transfer").value = "";
+        error.style.display = "flex";
+        message.innerText = "Successfully Transfer Money";
+      } else {
+        error.style.display = "flex";
+        message.innerText = "Incorrect Password";
+      }
+    } else {
+      error.style.display = "flex";
+      message.innerText = "Please Added Transfer Amount";
+    }
+  } else {
+    error.style.display = "flex";
+    message.innerText = "Please Added Valid User Account Number";
+  }
+});
+// Transfer js
+
+// bonus section js
+document
+  .getElementById("send-bonus")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    const bonusCode = document.getElementById("bonus-number").value;
+    if (bonusCode.length === 8) {
+      error.style.display = "flex";
+      message.innerText = "Successfully added your coupon code";
+      document.getElementById("bonus-number").value = "";
+    } else {
+      error.style.display = "flex";
+      message.innerText = "Please Added Valid Coupon Code";
+    }
+  });
+
+// bonus section js
