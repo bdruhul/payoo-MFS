@@ -43,6 +43,8 @@ message.innerText = "";
             document.getElementById("amount").value = "";
             document.getElementById("password").value = "";
             document.getElementById("options").value = "Select";
+            error.style.display = "flex";
+            message.innerText = "Successfully added balance to your account";
           } else {
             error.style.display = "flex";
             message.innerText = "Incorrect Password";
