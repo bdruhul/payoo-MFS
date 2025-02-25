@@ -3,7 +3,11 @@
 document.getElementById("log-out").addEventListener("click", function () {
   window.location.href = "./index.html";
 });
-// main page js
+
+// main blance
+const currentAmountElement = document.getElementById("money");
+let currentAmount = parseFloat(currentAmountElement.innerText);
+// main blance
 
 // all section element
 const addMoneyInput = document.getElementById("addMoneyInput");
@@ -69,8 +73,6 @@ document
     const account = document.getElementById("account-number").value;
     const ammount = document.getElementById("amount").value;
     const passWord = document.getElementById("password").value;
-    const currentAmountElement = document.getElementById("money");
-    let currentAmount = parseFloat(currentAmountElement.innerText);
     if (BankName === "Bkash" || BankName === "Nagad" || BankName === "Rocket") {
       if (account.length === 11) {
         if (parseInt(ammount) > 0) {
@@ -105,8 +107,6 @@ document
 // cashOut js
 document.getElementById("Withdraw").addEventListener("click", function (event) {
   event.preventDefault();
-  const currentAmountElement = document.getElementById("money");
-  let currentAmount = parseFloat(currentAmountElement.innerText);
   const AgentNumber = document.getElementById("Agent-number").value;
   const amountWithdrawal = document.getElementById("amount-withdrawal").value;
   const passwordWithdrawal = document.getElementById(
@@ -140,8 +140,6 @@ document.getElementById("Withdraw").addEventListener("click", function (event) {
 // Transfer js
 document.getElementById("send").addEventListener("click", function (event) {
   event.preventDefault();
-  const currentAmountElement = document.getElementById("money");
-  let currentAmount = parseFloat(currentAmountElement.innerText);
   const userNumber = document.getElementById("user-number").value;
   const amountTransfer = document.getElementById("amount-transfer").value;
   const passwordTransfer = document.getElementById("password-transfer").value;
@@ -187,3 +185,44 @@ document
   });
 
 // bonus section js
+// add money js code
+document
+  .getElementById("pay-Money")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    const BankName = document.getElementById("Bank").value;
+    const account = document.getElementById("Biller-number").value;
+    const ammount = document.getElementById("amountPay").value;
+    const passWord = document.getElementById("passwordPay").value;
+
+    if (BankName === "Bkash" || BankName === "Nagad" || BankName === "Rocket") {
+      if (account.length === 11) {
+        if (parseInt(ammount) > 0) {
+          if (parseInt(passWord) === 1234) {
+            const remvoeBlance = currentAmount - parseFloat(ammount);
+            currentAmountElement.innerText = remvoeBlance;
+
+            document.getElementById("Biller-number").value = "";
+            document.getElementById("amountPay").value = "";
+            document.getElementById("passwordPay").value = "";
+            document.getElementById("Bank").value = "Select";
+            error.style.display = "flex";
+            message.innerText = "Successfully Payment";
+          } else {
+            error.style.display = "flex";
+            message.innerText = "Incorrect Password";
+          }
+        } else {
+          error.style.display = "flex";
+          message.innerText = "Please Add a Valid Amount";
+        }
+      } else {
+        error.style.display = "flex";
+        message.innerText = "Bank Account Number Wrong";
+      }
+    } else {
+      error.style.display = "flex";
+      message.innerText = "Please Select Bank Name";
+    }
+  });
+// add money js code

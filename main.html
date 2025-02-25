@@ -152,14 +152,15 @@
                 </div>
             </section>
             <!-- CashOUt section  -->
-              <!-- Transfer Money section  -->
+            <!-- Transfer Money section  -->
             <section id="Transefer" class="px-3 py-4">
                 <h2 class="text-xl font-bold mb-2">Transfer Money</h2>
                 <div class="">
                     <div class=" rounded-2xl bg-[#fff]  w-full">
                         <form class="card-body">
                             <fieldset class="fieldset">
-                                <label class="fieldset-label font-bold text-[16px] text-[#080808]">User Account Number</label>
+                                <label class="fieldset-label font-bold text-[16px] text-[#080808]">User Account
+                                    Number</label>
                                 <input id="user-number" type="number"
                                     class="rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-4 py-4 placeholder:text-sm"
                                     placeholder="Enter 11-digit account number" required />
@@ -182,14 +183,15 @@
                 </div>
             </section>
             <!-- Transfer Money section  -->
-              <!-- Transfer Money section  -->
+            <!-- Transfer Money section  -->
             <section id="bonus" class="px-3 py-4">
                 <h2 class="text-xl font-bold mb-2">Get Bonus</h2>
                 <div class="">
                     <div class=" rounded-2xl bg-[#fff]  w-full">
                         <form class="card-body">
                             <fieldset class="fieldset">
-                                <label class="fieldset-label font-bold text-[16px] text-[#080808]">Enter Bonus Coupon</label>
+                                <label class="fieldset-label font-bold text-[16px] text-[#080808]">Enter Bonus
+                                    Coupon</label>
                                 <input id="bonus-number" type="text"
                                     class="rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-4 py-4 placeholder:text-sm"
                                     placeholder="Enter your coupon" required />
@@ -202,6 +204,45 @@
                 </div>
             </section>
             <!-- Transfer Money section  -->
+            <!-- Paybill section  -->
+            <section id="Paybill" class="px-3 py-4">
+                <h2 class="text-xl font-bold mb-2">Pay Bill</h2>
+                <div class="">
+                    <div class=" rounded-2xl bg-[#fff]  w-full">
+                        <form class="card-body">
+                            <fieldset class="fieldset">
+                                <label class="fieldset-label font-bold text-[16px] text-[#080808]">Select To Pay</label>
+                                <select id="Bank"
+                                    class="rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-4 py-4 placeholder:text-sm">
+                                    <option value="Select" class="text-sm text-[#080808]">Select Bank</option>
+                                    <option value="Bkash">Bkash</option>
+                                    <option value="Nagad">Nagad</option>
+                                    <option value="Rocket">Rocket</option>
+                                </select>
+                                <label class="fieldset-label font-bold text-[16px] text-[#080808]">Biller Account
+                                    Number</label>
+                                <input id="Biller-number" type="number"
+                                    class="rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-4 py-4 placeholder:text-sm"
+                                    placeholder="Enter account number" required />
+
+                                <label class="fieldset-label font-bold text-[16px] text-[#080808]">Amount to Pay</label>
+                                <input id="amountPay" type="number"
+                                    class="input rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-4 py-6 placeholder:text-sm"
+                                    placeholder="Add Amount to pay" required />
+                                <label class="fieldset-label font-bold text-[16px] text-[#080808] mt-3">Pin
+                                    Number</label>
+                                <input id="passwordPay" type="password"
+                                    class=" input rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-4 py-6 placeholder:text-sm"
+                                    placeholder="Enter 4 digit pin number" required />
+                                <button
+                                    class="btn mt-4 bg-[#0874F2] border-none outline-none py-7 rounded-full font-medium text-xl text-white"
+                                    id="pay-Money">Pay Now</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- Paybill section  -->
         </main>
         <!-- main contain -->
 
@@ -211,7 +252,8 @@
             id="error">
             <div class=" bg-black text-white p-4 w-3/4 mx-auto rounded-3xl  text-center">
                 <p id="messageText"></p>
-                <button class="bg-white text-red-800 px-4 py-2 rounded mt-4 hover:bg-gray-200" id="ok"><a>OK</a></button>
+                <button class="bg-white text-red-800 px-4 py-2 rounded mt-4 hover:bg-gray-200"
+                    id="ok"><a>OK</a></button>
             </div>
         </section>
         <!-- End Error Notification -->
