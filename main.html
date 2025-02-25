@@ -93,7 +93,7 @@
                                 <label class="fieldset-label font-bold text-[16px] text-[#080808]">Select A Bank</label>
                                 <select id="options"
                                     class="rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-4 py-4 placeholder:text-sm">
-                                    <option value="Selcet" class="text-sm text-[#080808]">Select Bank</option>
+                                    <option value="Select" class="text-sm text-[#080808]">Select Bank</option>
                                     <option value="Bkash">Bkash</option>
                                     <option value="Nagad">Nagad</option>
                                     <option value="Rocket">Rocket</option>
@@ -122,9 +122,55 @@
                 </div>
             </section>
             <!-- addMoney section  -->
+            <!-- cashOut section  -->
+            <section id="cash-out" class="px-3 py-4">
+                <h2 class="text-xl font-bold mb-2">Cash Out</h2>
+                <div class="">
+                    <div class=" rounded-2xl bg-[#fff]  w-full">
+                        <form class="card-body">
+                            <fieldset class="fieldset">
+                                <label class="fieldset-label font-bold text-[16px] text-[#080808]">Agent Number</label>
+                                <input id="account-number" type="number"
+                                    class="rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-4 py-4 placeholder:text-sm"
+                                    placeholder="Enter 11-digit account number" required />
+
+                                <label class="fieldset-label font-bold text-[16px] text-[#080808]">Amount</label>
+                                <input id="amount" type="number"
+                                    class="input rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-4 py-6 placeholder:text-sm"
+                                    placeholder="Add Amount to withdraw" required />
+                                <label class="fieldset-label font-bold text-[16px] text-[#080808] mt-3">Pin
+                                    Number</label>
+                                <input id="password" type="password"
+                                    class=" input rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-4 py-6 placeholder:text-sm"
+                                    placeholder="Enter 4 digit pin number" required />
+                                <button
+                                    class="btn mt-4 bg-[#0874F2] border-none outline-none py-7 rounded-full font-medium text-xl text-white"
+                                    id="Withdraw">Withdraw Money</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- CashOUt section  -->
         </main>
         <!-- main contain -->
+
+        <!-- Error Notification -->
+        <section
+            class="bg-[rgba(0,0,0,0.5)] max-w-md min-h-full mx-auto py-6 absolute top-0 left-1/2 transform -translate-x-1/2 w-full flex justify-center items-center"
+            id="error">
+            <div class=" bg-black text-white p-4 w-3/4 mx-auto rounded-3xl  text-center">
+                <p id="messageText"></p>
+                <button class="bg-white text-red-800 px-4 py-2 rounded mt-4 hover:bg-gray-200"><a
+                        href="main.html">OK</a></button>
+            </div>
+        </section>
+        <!-- End Error Notification -->
+
+
     </section>
+
+
     <!-- custom js -->
     <script src="assets/js/main.js"></script>
     <!-- custom js -->
