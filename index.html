@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- added custom css  -->
 </head>
-<body class="bg-slate-800">
+<body class="bg-slate-800 ">
     <section class=" max-w-md min-h-screen mx-auto py-6 bg-gray-200">
         <!-- header  -->
         <header>
@@ -38,11 +38,11 @@
                 <div class=" rounded-2xl bg-[#fff]  w-full">
                     <form class="card-body">
                         <fieldset class="fieldset">
-                            <label class="fieldset-label font-bold text-xl text-[#080808]">Mobile Number</label>
-                            <input id="account-number" type="number" class="input rounded-full border-none outline-none bg-[#F4F5F7] w-full px-6 py-6 placeholder:text-sm" placeholder="Enter Your Number" required />
-                            <label class="fieldset-label">4 Digit Pin</label>
-                            <input id="password" type="password" class="input" placeholder="Password" required />
-                            <button class="btn btn-neutral mt-4" id="login-btn">Login</button>
+                            <label class="fieldset-label font-bold text-xl text-[#080808] mb-2">Mobile Number</label>
+                            <input id="account-number" type="number" class="input rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-6 py-6 placeholder:text-sm" placeholder="Enter Your Number" required />
+                            <label class="fieldset-label font-bold text-xl mb-2 text-[#080808] mt-3">4 Digit Pin</label>
+                            <input id="password" type="password" class=" input rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-6 py-6 placeholder:text-sm" placeholder="Password" required />
+                            <button class="btn mt-8 bg-[#0874F2] border-none outline-none py-7 rounded-full font-medium text-2xl text-white" id="login-btn">Login</button>
                         </fieldset>
                     </form>
                 </div>
@@ -51,6 +51,14 @@
         <!-- login  -->
     </section>
 
+      <!-- Error Notification -->
+<section class="bg-[rgba(0,0,0,0.5)] max-w-md min-h-screen mx-auto py-6 absolute top-0 left-1/2 transform -translate-x-1/2 w-full flex justify-center items-center" id="error">
+    <div class=" bg-black text-white p-4 w-3/4 mx-auto rounded-3xl  text-center">
+        <p>Incorrect password</p>
+        <button class="bg-white text-red-800 px-4 py-2 rounded mt-2 hover:bg-gray-200"><a href="index.html">OK</a></button>
+    </div>
+</section>
+<!-- End Error Notification -->
 
     <!-- custom js -->
     <script src="assets/js/custom.js"></script>
