@@ -1,6 +1,5 @@
+/*Index js*/
 document.getElementById("error").style.display = "none";
-
-/*login part js*/
 document
   .getElementById("login-btn")
   .addEventListener("click", function (event) {
@@ -22,4 +21,4 @@ document
     </div>`;
     }
   });
-/*login part js*/
+/*index js*/
