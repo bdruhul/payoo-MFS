@@ -50,39 +50,78 @@
                 </div>
                 <!-- content top  -->
                 <div class="item-box grid grid-cols-3 gap-[16.5px] mt-6 cursor-pointer">
-                    <div class="rounded-lg py-5 px-5  flex justify-center items-center flex-col" id="add-money"
+                    <div class="rounded-lg py-5 px-  flex justify-center items-center flex-col" id="addMoney"
                         style="box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;">
                         <img src="./assets/images/wallet1.png" alt="" class="w-6 h-6 ">
                         <h3 class="text-[16px] font-semibold mt-3">Add Money</h3>
                     </div>
-                    <div class="rounded-lg py-5 px-5  flex justify-center items-center flex-col" id="add-money"
+                    <div class="rounded-lg py-5 px-5  flex justify-center items-center flex-col" id="CashOut"
+                        style="box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;">
+                        <img src="./assets/images/send1.png" alt="" class="w-6 h-6 ">
+                        <h3 class="text-[16px] font-semibold mt-3">CashOut</h3>
+                    </div>
+                    <div class="rounded-lg py-5 px-2  flex justify-center items-center flex-col" id="TransferMoney"
                         style="box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;">
                         <img src="./assets/images/money1.png" alt="" class="w-6 h-6 ">
-                        <h3 class="text-[16px] font-semibold mt-3">Cash Out</h3>
+                        <h3 class="text-[16px] font-semibold mt-3">Transfer Money</h3>
+                    </div>
+                    <div class="rounded-lg py-5 px-5  flex justify-center items-center flex-col" id="GetBonus"
+                        style="box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;">
+                        <img src="./assets/images/bonus1.png" alt="" class="w-6 h-6 ">
+                        <h3 class="text-[16px] font-semibold mt-3">Get Bonus</h3>
                     </div>
                     <div class="rounded-lg py-5 px-5  flex justify-center items-center flex-col" id="add-money"
                         style="box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;">
                         <img src="./assets/images/money1.png" alt="" class="w-6 h-6 ">
-                        <h3 class="text-[16px] font-semibold mt-3">Cash Out</h3>
+                        <h3 class="text-[16px] font-semibold mt-3">Pay Bill</h3>
                     </div>
-                    <div class="rounded-lg py-5 px-5  flex justify-center items-center flex-col" id="add-money"
+                    <div class="rounded-lg py-5 px-5  flex justify-center items-center flex-col" id="Transactions"
                         style="box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;">
-                        <img src="./assets/images/money1.png" alt="" class="w-6 h-6 ">
-                        <h3 class="text-[16px] font-semibold mt-3">Cash Out</h3>
-                    </div>
-                    <div class="rounded-lg py-5 px-5  flex justify-center items-center flex-col" id="add-money"
-                        style="box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;">
-                        <img src="./assets/images/money1.png" alt="" class="w-6 h-6 ">
-                        <h3 class="text-[16px] font-semibold mt-3">Cash Out</h3>
-                    </div>
-                    <div class="rounded-lg py-5 px-5  flex justify-center items-center flex-col" id="add-money"
-                        style="box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;">
-                        <img src="./assets/images/money1.png" alt="" class="w-6 h-6 ">
-                        <h3 class="text-[16px] font-semibold mt-3">Cash Out</h3>
+                        <img src="./assets/images/transaction1.png" alt="" class="w-6 h-6 ">
+                        <h3 class="text-[16px] font-semibold mt-3">Transactions</h3>
                     </div>
 
                 </div>
             </section>
+            <!-- addMoney section  -->
+            <section id="addMoneyInput" class="px-3 py-4">
+                <h2 class="text-xl font-bold mb-2">Add Money</h2>
+                <div class="">
+                    <div class=" rounded-2xl bg-[#fff]  w-full">
+                        <form class="card-body">
+                            <fieldset class="fieldset">
+                                <label class="fieldset-label font-bold text-[16px] text-[#080808]">Select A Bank</label>
+                                <select id="options"
+                                    class="rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-4 py-4 placeholder:text-sm">
+                                    <option value="Selcet" class="text-sm text-[#080808]">Select Bank</option>
+                                    <option value="Bkash">Bkash</option>
+                                    <option value="Nagad">Nagad</option>
+                                    <option value="Rocket">Rocket</option>
+                                </select>
+                                <label class="fieldset-label font-bold text-[16px] text-[#080808]">Bank Account
+                                    Number</label>
+                                <input id="account-number" type="number"
+                                    class="rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-4 py-4 placeholder:text-sm"
+                                    placeholder="Enter 11-digit account number" required />
+
+                                <label class="fieldset-label font-bold text-[16px] text-[#080808]">Amount to Add</label>
+                                <input id="amount" type="number"
+                                    class="input rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-4 py-6 placeholder:text-sm"
+                                    placeholder="Add Amount to withdraw" required />
+                                <label class="fieldset-label font-bold text-[16px] text-[#080808] mt-3">Pin
+                                    Number</label>
+                                <input id="password" type="password"
+                                    class=" input rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-4 py-6 placeholder:text-sm"
+                                    placeholder="Enter 4 digit pin number" required />
+                                <button
+                                    class="btn mt-4 bg-[#0874F2] border-none outline-none py-7 rounded-full font-medium text-xl text-white"
+                                    id="Add-Money">Add Money</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- addMoney section  -->
         </main>
         <!-- main contain -->
     </section>
