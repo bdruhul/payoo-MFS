@@ -24,8 +24,6 @@ document
     event.preventDefault();
 
     const ok = document.getElementById("ok");
-    ok.removeAttribute("href");
-
     ok.addEventListener("click", function () {
       const error = document.getElementById("error");
       error.style.display = "none";
@@ -97,9 +95,8 @@ document.getElementById("Withdraw").addEventListener("click", function (event) {
         document.getElementById("Agent-number").value = "";
         document.getElementById("amount-withdrawal").value = "";
         document.getElementById("password-withdrawal").value = "";
-
         error.style.display = "flex";
-        message.innerText = "Successfully added balance to your account";
+        message.innerText = "Successfully Cash Out";
       } else {
         error.style.display = "flex";
         message.innerText = "Incorrect Password";
