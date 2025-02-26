@@ -18,6 +18,8 @@ const TransferMoney = document.getElementById("Transefer");
 TransferMoney.style.display = "none";
 const bonus = document.getElementById("bonus");
 bonus.style.display = "none";
+const pay = document.getElementById("Paybill");
+  pay.style.display = "none";
 
 // all section element
 
@@ -28,12 +30,14 @@ document.getElementById("addMoney").addEventListener("click", function () {
   cashout.style.display = "none";
   TransferMoney.style.display = "none";
   bonus.style.display = "none";
+  pay.style.display = "none";
 });
 document.getElementById("CashOut").addEventListener("click", function () {
   addMoneyInput.style.display = "none";
   cashout.style.display = "block";
   TransferMoney.style.display = "none";
   bonus.style.display = "none";
+  pay.style.display = "none";
 });
 
 document.getElementById("TransferMoney").addEventListener("click", function () {
@@ -41,13 +45,25 @@ document.getElementById("TransferMoney").addEventListener("click", function () {
   cashout.style.display = "none";
   TransferMoney.style.display = "block";
   bonus.style.display = "none";
+  pay.style.display = "none";
 });
 document.getElementById("GetBonus").addEventListener("click", function () {
   addMoneyInput.style.display = "none";
   cashout.style.display = "none";
   TransferMoney.style.display = "none";
   bonus.style.display = "block";
+  pay.style.display = "none";
 });
+
+document.getElementById("Pay-money").addEventListener("click", function(){
+  addMoneyInput.style.display = "none";
+  cashout.style.display = "none";
+  TransferMoney.style.display = "none";
+  bonus.style.display = "none";
+  pay.style.display = "block";
+  
+
+})
 // section click to link
 
 // error message
@@ -185,7 +201,7 @@ document
   });
 
 // bonus section js
-// add money js code
+// Pay js code
 document
   .getElementById("pay-Money")
   .addEventListener("click", function (event) {
@@ -225,4 +241,4 @@ document
       message.innerText = "Please Select Bank Name";
     }
   });
-// add money js code
+// Pay money js code
