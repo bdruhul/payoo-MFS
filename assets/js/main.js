@@ -61,7 +61,7 @@ document.getElementById("Pay-money").addEventListener("click", function(){
   TransferMoney.style.display = "none";
   bonus.style.display = "none";
   pay.style.display = "block";
-  
+
 
 })
 // section click to link
